@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBHunter | Modern Career Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-flex">
+            <div class="logo" onclick="showSection('dashboard')">JB<span>Hunter</span></div>
+            
+            <form class="search-form">
+                <div class="search-wrapper">
+                    <input type="text" placeholder="Search jobs, companies, or insights...">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <nav class="nav-links">
+                <button onclick="showSection('dashboard')">Home</button>
+                <button onclick="showSection('jobs')">Jobs</button>
+                <button onclick="showSection('forum')">Community</button>
+            </nav>
+            <div class="menu-icon">☰</div>
+        </div>
+    </header>
+
+    <section id="dashboard" class="page-section active">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Find your <span>dream career</span> today</h1>
+                <p>Explore high-paying roles across the most booming industries in the region.</p>
+            </div>
+
+            <div class="industry-grid">
+                <div class="ind-card ind-box1" onclick="showSection('jobs')">
+                    <div class="overlay">
+                        <h3>Tech</h3>
+                        <p>1,240 Openings</p>
+                    </div>
+                </div>
+                <div class="ind-card ind-box2" onclick="showSection('jobs')">
+                    <div class="overlay">
+                        <h3>BPO</h3>
+                        <p>3,820 Openings</p>
+                    </div>
+                </div>
+                <div class="ind-card ind-box3" onclick="showSection('jobs')">
+                    <div class="overlay">
+                        <h3>Food</h3>
+                        <p>520 Openings</p>
+                    </div>
+                </div>
+                <div class="ind-card ind-box4" onclick="showSection('jobs')">
+                    <div class="overlay">
+                        <h3>Hotel</h3>
+                        <p>915 Openings</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <button class="btn btn-primary" onclick="showSection('jobs')">EXPLORE ALL JOBS</button>
+                <button class="btn btn-outline">JOBS NEAR ME</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="forum" class="page-section">
+        <div class="container split-layout">
+            <aside class="sidebar forum-sidebar">
+                <div class="sidebar-label">DISCOVER COMMUNITIES</div>
+                <ul class="community-nav">
+                    <li class="nav-item active">
+                        <span class="nav-icon">💻</span>
+                        <div class="nav-text">
+                            <span class="title">Tech Hub</span>
+                            <span class="subtitle">2.4k Hunters</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-icon">📞</span>
+                        <div class="nav-text">
+                            <span class="title">BPO Circle</span>
+                            <span class="subtitle">1.8k Hunters</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sidebar-promo">
+                    <span class="promo-tag">PRO TIP</span>
+                    <h4>Get Verified</h4>
+                    <p>Verified profiles get 3x more recruiter views.</p>
+                    <button class="promo-btn">Verify Now</button>
+                </div>
+            </aside>
+
+            <main class="content-area forum-feed">
+                <div class="post-composer">
+                    <div class="composer-top">
+                        <div class="user-avatar-small">JH</div>
+                        <input type="text" placeholder="Share an interview experience...">
+                    </div>
+                    <div class="composer-actions">
+                        <button class="comp-btn">📷 Image</button>
+                        <button class="post-btn-submit">Post</button>
+                    </div>
+                </div>
+
+                <article class="forum-card">
+                    <div class="forum-card-header">
+                        <div class="post-author">
+                            <div class="user-avatar secondary">JD</div>
+                            <div class="author-info">
+                                <span class="author-name">John Doe</span>
+                                <span class="post-meta">2h ago • <span class="post-tag">Tech</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forum-card-body">
+                        <h3>Watch out for "ghost" job postings</h3>
+                        <p>If you see a company reposting the same role every 2 weeks without hiring, proceed with caution. It might just be market research.</p>
+                    </div>
+                    <div class="forum-card-footer">
+                        <button class="interaction-btn">▲ 142</button>
+                        <button class="interaction-btn">💬 28</button>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </section>
+
+    <section id="jobs" class="page-section">
+        <div class="container split-layout no-padding">
+            <aside class="sidebar job-list-sidebar">
+                <div class="sidebar-label">RECENT OPENINGS</div>
+                <div class="job-card active">
+                    <div class="job-card-header">
+                        <span class="company-logo">SF</span>
+                        <span class="job-status">New</span>
+                    </div>
+                    <h4 class="job-title">Senior Frontend Developer</h4>
+                    <p class="company-name">SkyFlow Tech</p>
+                    <div class="job-tags"><span>Remote</span><span>$80k+</span></div>
+                </div>
+                <div class="job-card">
+                    <div class="job-card-header"><span class="company-logo" style="background:#f59e0b">NX</span></div>
+                    <h4 class="job-title">Support Lead</h4>
+                    <p class="company-name">NexCall BPO</p>
+                    <div class="job-tags"><span>On-site</span></div>
+                </div>
+            </aside>
+
+            <main class="content-area job-detail-view">
+                <div class="job-detail-header">
+                    <div>
+                        <h1>Senior Frontend Developer</h1>
+                        <p>SkyFlow Tech • Manila • 2 days ago</p>
+                    </div>
+                    <button class="btn btn-primary">Apply Now</button>
+                </div>
+                <div class="job-description-content">
+                    <h3>About the Role</h3>
+                    <p>Join our fintech team to build the future of mobile banking. We need experts in React and CSS animation.</p>
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li>HMO from Day 1</li>
+                        <li>Remote equipment budget</li>
+                        <li>Annual bonus</li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>

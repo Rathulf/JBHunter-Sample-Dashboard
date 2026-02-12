@@ -1,0 +1,89 @@
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --bg: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+* { box-sizing: border-box; }
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.main-header {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0; z-index: 1000;
+    padding: 0.75rem 0;
+}
+.nav-flex { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.logo { font-weight: 800; font-size: 1.5rem; cursor: pointer; }
+.logo span { color: var(--primary); }
+
+.search-wrapper {
+    display: flex; background: #f1f5f9; padding: 4px; border-radius: 12px; width: 400px;
+}
+.search-wrapper input { border: none; background: transparent; padding: 8px 12px; flex: 1; outline: none; }
+.search-wrapper button { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+.nav-links button {
+    background: none; border: none; font-weight: 600; color: var(--text-muted); cursor: pointer; margin-left: 20px;
+}
+.nav-links button:hover { color: var(--primary); }
+
+.page-section { display: none; padding: 4rem 0; }
+.page-section.active { display: block; }
+
+.hero-text { text-align: center; margin-bottom: 4rem; }
+.hero-text h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+.hero-text h1 span { color: var(--primary); }
+
+.industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.ind-card {
+    height: 240px; border-radius: 20px; overflow: hidden; position: relative;
+    box-shadow: var(--shadow); cursor: pointer; transition: 0.3s;
+}
+.ind-card:hover { transform: translateY(-10px); }
+.overlay {
+    position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: white;
+}
+.overlay h3 { margin: 0; font-size: 1.5rem; }
+
+.ind-box1 { background: #6366f1; }
+.ind-box2 { background: #f59e0b; }
+.ind-box3 { background: #ef4444; }
+.ind-box4 { background: #10b981; }
+
+.dashboard-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 3rem; }
+.btn { padding: 14px 28px; border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+.btn-primary { background: var(--primary); color: white; border: none; }
+.btn-outline { background: white; border: 2px solid var(--border); color: var(--text-main); }
+
+.split-layout { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; align-items: start; }
+.no-padding { padding: 0; height: calc(100vh - 75px); }
+
+.sidebar { background: white; border-radius: 16px; border: 1px solid var(--border); padding: 1.5rem; position: sticky; top: 100px; }
+.sidebar-label { font-size: 0.75rem; font-weight: 800; color: var(--text-muted); margin-bottom: 1rem; }
+
+.forum-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; }
+.post-author { display: flex; align-items: center; gap: 12px; }
+.user-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.user-avatar.secondary { background: #10b981; }
+
+.job-list-sidebar { overflow-y: auto; height: 100%; border-radius: 0; border-top: none; }
+.job-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; cursor: pointer; }
+.job-card.active { border-color: var(--primary); background: #f5f3ff; }
+.company-logo { width: 32px; height: 32px; background: #000; color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 800; font-size: 0.7rem; }
